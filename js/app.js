@@ -69,7 +69,31 @@ function fetchBreedImage() {
 // ------------------------------------------
 select.addEventListener('change', fetchBreedImage);
 card.addEventListener('click', fetchBreedImage);
+form.addEventListener('submit', postData);
 
 // ------------------------------------------
 //  POST DATA
 // ------------------------------------------
+function postData(e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const comment = document.getElementById('comment').value;
+
+  const config = {
+    method: 'POST',
+    headers: {
+      'Content-type': 'Application/json'
+    },
+    body: JSON.stringify({ name, comment })
+  };
+  console.log(config);
+
+  fetch('https://jsonplaceholder.typicode.com/comments', config)
+  .then(checkStatus)
+  .then(res => {
+    console.log(res);
+    return res.json();
+    })
+  .then(data => console.log(data))
+}
+
