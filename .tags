@@ -1,0 +1,24 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+checkStatus	.\js\app-finish.js	/^function checkStatus(response) {$/;"	F
+checkStatus	.\js\app.js	/^function checkStatus(response) {$/;"	F
+config	.\js\app-finish.js	/^    const config = {$/;"	O
+config	.\js\app.js	/^  const config = {$/;"	O
+fetchBreedImage	.\js\app-finish.js	/^function fetchBreedImage() {$/;"	F
+fetchBreedImage	.\js\app.js	/^function fetchBreedImage() {$/;"	F
+fetchData	.\js\app-finish.js	/^function fetchData(url) {$/;"	F
+fetchData	.\js\app.js	/^const fetchData = url => {$/;"	F
+generateImage	.\js\app-finish.js	/^function generateImage(data) {$/;"	F
+generateImage	.\js\app.js	/^function generateImage(data) {$/;"	F
+generateOptions	.\js\app-finish.js	/^function generateOptions(data) {$/;"	F
+generateOptions	.\js\app.js	/^function generateOptions(data) {$/;"	F
+headers	.\js\app-finish.js	/^        headers: {$/;"	P
+headers	.\js\app.js	/^    headers: {$/;"	P
+options	.\js\app-finish.js	/^    const options = data.map(item => `$/;"	F
+options	.\js\app.js	/^  const options = data.map(item =>$/;"	F
+postData	.\js\app-finish.js	/^function postData(e) {$/;"	F
+postData	.\js\app.js	/^function postData(e) {$/;"	F
