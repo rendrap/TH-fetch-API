@@ -6,14 +6,16 @@ const form = document.querySelector('form');
 // ------------------------------------------
 const fetchData = url => {
   return fetch(url)
-    .then(res => res.json());
+    .then(checkStatus)
+    .then(res => {
+      console.log(res);
+      return res.json();
+    })
+    .catch(error => console.log('Looks like there was a problem', error));
 };
 
 fetchData('https://dog.ceo/api/breeds/list')
-  .then(data => {
-    // console.log(data.message);
-    generateOptions(data.message);
-  });
+  .then(data => generateOptions(data.message));
 
 fetchData('https://dog.ceo/api/breeds/image/random')
   .then(data => generateImage(data.message));
@@ -22,6 +24,13 @@ fetchData('https://dog.ceo/api/breeds/image/random')
 // ------------------------------------------
 //  HELPER FUNCTIONS
 // ------------------------------------------
+function checkStatus(response) {
+  if (response.ok) {
+    return Promise.resolve(response);
+  }
+  return Promise.reject(new Error(response.statusText));
+}
+
 function generateOptions(data) {
   const options = data.map(item =>
     `<option value=${item}>${item}</option>`
@@ -34,7 +43,6 @@ function generateImage(data) {
     <img src=${data} alt>
     <p>Click here to view images of ${select.value}s </p>
     `;
-
   card.innerHTML = html;
 }
 
